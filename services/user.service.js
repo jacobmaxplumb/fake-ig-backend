@@ -29,10 +29,17 @@ const getUsersFriendsPosts = async (id) => {
     return posts.filter(p => user.friends.includes(p.userId));
 }
 
+const updateUser = async (id, user) => {
+    const oldUser = await getUserById(id);
+    const updatedUser = {...oldUser, ...user};
+    return await (await axios.put(`http://localhost:3000/users/${id}`, updatedUser)).data;
+}
+
 module.exports = {
     getUsers,
     getUserById,
     getUsersFriends,
     getUsersPosts,
-    getUsersFriendsPosts
+    getUsersFriendsPosts,
+    updateUser
 }
