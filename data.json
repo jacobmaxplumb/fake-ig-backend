@@ -1,0 +1,56 @@
+{
+  "users": [
+    {
+      "fullName": "Jac Plumbb",
+      "age": "30",
+      "signedUp": "10/27/2020",
+      "id": "L98CKgeqoyMhwv8oi0A4pjMlySm2",
+      "friends": [
+        "7Uxbp4B",
+        "7Uxbp4C",
+        "7Uxbp4L"
+      ]
+    },
+    {
+      "fullName": "Marie Plumb",
+      "age": "28",
+      "signedUp": "09/25/2021",
+      "id": "7Uxbp4B",
+      "friends": [
+        "L98CKgeqoyMhwv8oi0A4pjMlySm2"
+      ]
+    },
+    {
+      "fullName": "Jon Plumb",
+      "age": "31",
+      "signedUp": "09/25/2021",
+      "id": "7Uxbp4C",
+      "friends": [
+        "L98CKgeqoyMhwv8oi0A4pjMlySm2"
+      ]
+    },
+    {
+      "fullName": "James Plumb",
+      "age": "31",
+      "signedUp": "09/25/2021",
+      "id": "7Uxbp4L",
+      "friends": [
+        "L98CKgeqoyMhwv8oi0A4pjMlySm2"
+      ]
+    }
+  ],
+  "posts": [
+    {
+      "id": "abcdef",
+      "content": "Something else even"
+    },
+    {
+      "id": "abcde",
+      "content": "Something else"
+    },
+    {
+      "id": "abcd",
+      "content": "Something"
+    }
+  ]
+}
