@@ -1,14 +1,14 @@
 {
   "users": [
     {
-      "fullName": "Jac Plumbb",
-      "age": "30",
-      "signedUp": "10/27/2020",
+      "fullName": "Jacob Plumbb",
+      "age": "28",
+      "signedUp": "09/25/2021",
       "id": "L98CKgeqoyMhwv8oi0A4pjMlySm2",
       "friends": [
         "7Uxbp4B",
-        "7Uxbp4C",
-        "7Uxbp4L"
+        "7Uxbp4L",
+        "7Uxbp4C"
       ]
     },
     {
