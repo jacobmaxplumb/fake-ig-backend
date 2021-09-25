@@ -42,14 +42,17 @@
   "posts": [
     {
       "id": "abcdef",
+      "userId": "7Uxbp4B",
       "content": "Something else even"
     },
     {
       "id": "abcde",
+      "userId": "7Uxbp4B",
       "content": "Something else"
     },
     {
       "id": "abcd",
+      "userId": "L98CKgeqoyMhwv8oi0A4pjMlySm2",
       "content": "Something"
     }
   ]
