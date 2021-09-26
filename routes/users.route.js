@@ -1,16 +1,16 @@
 const express = require('express');
-const { getUserById, getUsersFriends, getUsersPosts, getUsersFriendsPosts, updateUser } = require('../services/user.service');
+const { getUserById, getUsersFriends, getUsersPosts, getUsersFriendsPosts, getUsers } = require('../services/user.service');
 const usersRoute = express.Router();
+
+usersRoute.get('/', (req, res) => {
+    getUsers().then(users => {
+        res.send(users);
+    })
+})
 
 usersRoute.get('/:id', (req, res) => {
     getUserById(req.params.id).then(user => {
         res.send(user);
-    })
-})
-
-usersRoute.put('/:id', (req, res) => {
-    updateUser(req.params.id, req.body).then(result => {
-        res.send(result);
     })
 })
 
