@@ -1,53 +1,23 @@
 {
-  "users": [
+  "friends": [
     {
-      "fullName": "Jacob Plumbb",
-      "age": "28",
-      "signedUp": "09/25/2021",
       "id": "L98CKgeqoyMhwv8oi0A4pjMlySm2",
-      "friends": [
-        "7Uxbp4B",
-        "7Uxbp4L",
-        "7Uxbp4C"
-      ]
+      "friends": ["ZzI1L7N1xgReo0HxQ365lk4QPdw1"]
     },
     {
-      "fullName": "Marie Plumb",
-      "age": "28",
-      "signedUp": "09/25/2021",
-      "id": "7Uxbp4B",
-      "friends": [
-        "L98CKgeqoyMhwv8oi0A4pjMlySm2"
-      ]
-    },
-    {
-      "fullName": "Jon Plumb",
-      "age": "31",
-      "signedUp": "09/25/2021",
-      "id": "7Uxbp4C",
-      "friends": [
-        "L98CKgeqoyMhwv8oi0A4pjMlySm2"
-      ]
-    },
-    {
-      "fullName": "James Plumb",
-      "age": "31",
-      "signedUp": "09/25/2021",
-      "id": "7Uxbp4L",
-      "friends": [
-        "L98CKgeqoyMhwv8oi0A4pjMlySm2"
-      ]
+      "id": "ZzI1L7N1xgReo0HxQ365lk4QPdw1",
+      "friends": ["L98CKgeqoyMhwv8oi0A4pjMlySm2"]
     }
   ],
   "posts": [
     {
       "id": "abcdef",
-      "userId": "7Uxbp4B",
+      "userId": "ZzI1L7N1xgReo0HxQ365lk4QPdw1",
       "content": "Something else even"
     },
     {
       "id": "abcde",
-      "userId": "7Uxbp4B",
+      "userId": "ZzI1L7N1xgReo0HxQ365lk4QPdw1",
       "content": "Something else"
     },
     {

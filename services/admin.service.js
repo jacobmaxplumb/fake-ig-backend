@@ -1,7 +1,8 @@
 const admin = require('firebase-admin');
+var serviceAccount = require('../fake-ig-demo-firebase-adminsdk-df558-213185573c.json');
 
 admin.initializeApp({
-    serviceAccountId: 'firebase-adminsdk-df558@fake-ig-demo.iam.gserviceaccount.com'
+    credential: admin.credential.cert(serviceAccount)
 });
 
 module.exports = admin;
