@@ -1,7 +1,13 @@
 const admin = require('firebase-admin');
 
 admin.initializeApp({
-    serviceAccountId: 'firebase-adminsdk-df558@fake-ig-demo.iam.gserviceaccount.com'
+    apiKey: "AIzaSyAMNmOavSsAwKoNDTEVBJTVzCqrhvG1Ld4",
+    authDomain: "fake-ig-demo.firebaseapp.com",
+    projectId: "fake-ig-demo",
+    storageBucket: "fake-ig-demo.appspot.com",
+    messagingSenderId: "736644692439",
+    appId: "1:736644692439:web:5ce6778a59b5d531e7f392",
+    measurementId: "G-RNXWZFEG7B"
 });
 
 module.exports = admin;
