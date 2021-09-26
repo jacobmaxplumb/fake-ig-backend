@@ -1,7 +1,12 @@
 const { default: axios } = require("axios")
+const admin = require('./admin.service');
 
 const getUsers = async () => {
-    return await (await axios.get('http://localhost:3000/users')).data;
+    return await admin.auth().listUsers().then(data => {
+        return data.users.map(u => {
+            return { uid: u.uid, email: u.email, displayName: u.displayName, photoURL: u.photoURL, metadata: u.metadata };
+        })
+    });
 }
 
 const getPosts = async () => {
@@ -9,13 +14,7 @@ const getPosts = async () => {
 }
 
 const getUserById = async (id) => {
-    return await (await axios.get(`http://localhost:3000/users/${id}`)).data;
-}
-
-const getUsersFriends = async (id) => {
-    const user = await getUserById(id);
-    const users = await getUsers();
-    return users.filter(u => user.friends.includes(u.id));
+    return await admin.auth().getUser(id);
 }
 
 const getUsersPosts = async (id) => {
@@ -23,16 +22,17 @@ const getUsersPosts = async (id) => {
     return posts.filter(p => p.userId === id);
 }
 
-const getUsersFriendsPosts = async (id) => {
+const getUsersFriends = async (id) => {
+    const users = await getUsers();
     const user = await getUserById(id);
-    const posts = await getPosts();
-    return posts.filter(p => user.friends.includes(p.userId));
+    const friendIds = await (await axios.get(`http://localhost:3000/friends/${id}`)).data.friends;
+    return users.filter(u => friendIds.includes(u.uid));
 }
 
-const updateUser = async (id, user) => {
-    const oldUser = await getUserById(id);
-    const updatedUser = {...oldUser, ...user};
-    return await (await axios.put(`http://localhost:3000/users/${id}`, updatedUser)).data;
+const getUsersFriendsPosts = async (id) => {
+    const friends = await (await getUsersFriends(id)).map(f => f.uid);
+    const posts = await getPosts();
+    return posts.filter(p => friends.includes(p.userId));
 }
 
 module.exports = {
@@ -40,6 +40,5 @@ module.exports = {
     getUserById,
     getUsersFriends,
     getUsersPosts,
-    getUsersFriendsPosts,
-    updateUser
+    getUsersFriendsPosts
 }
